@@ -1,0 +1,47 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27 may. 2023, 22:59:42
+    Author     : PC
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+/*Diseño formulario registrar*/
+.Grupos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+}
+
+.Grupos input{
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(28,28,28, 0.5);
+    outline: none;
+}
+
+.Grupos label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Botones input{
+    background-color: #192734;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font-size: 16px;
+}
+
+.Botones input:hover{
+    background-color: #2E506D;
+}

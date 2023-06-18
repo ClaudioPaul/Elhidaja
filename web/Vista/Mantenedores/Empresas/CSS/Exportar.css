@@ -1,0 +1,134 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27 may. 2023, 22:55:17
+    Author     : PC
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Botones Exportar*/
+.Exportar{
+   width: 100%;
+   height: 60%;
+   display: flex;
+   flex-direction: row;
+   margin-top: 50px;
+   justify-content: space-between;
+   align-items: center;
+   box-sizing: border-box;
+   overflow: hidden;
+   padding: 0 10px;
+}
+
+.grupo-btns {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grupo-btns button{
+  width: auto;
+  height: 40px;
+  padding: 5px 10px;
+  background-color: #192734;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Exportar .Exportar-1{
+    margin-right: 6px;
+}
+
+.Exportar button:hover{
+    background-color: #2E506D;
+    cursor: pointer;
+}
+
+.btn-exportar i{
+    margin-left: 6px;
+    font-size: 20px
+}
+
+.Buscar {
+    width: 40%;
+    height: 100%
+}
+
+.Buscar-Empresa {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #192734;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Buscar-Empresa input:nth-child(1),
+.Buscar-Empresa input:nth-child(2) {
+    border: none;
+    height: 100%;
+    outline: none;
+}
+
+.Buscar-Empresa input:nth-child(1) {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.Buscar-Empresa input:nth-child(2) {
+    width: 100px;
+    background-color: #192734;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.Buscar-Empresa input:nth-child(2):hover {
+    background-color: #2E506D;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*Diseño para Celular*/
+@media (max-width: 480px) {
+   .Exportar{
+       margin-top: 10px;
+       padding: 0;
+       flex-direction: column;
+    }
+
+    .grupo-btns {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grupo-btns button{
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    
+    .Buscar {
+        width: 100%;
+        height: 100%
+    }
+    
+}

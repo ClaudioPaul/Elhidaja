@@ -1,0 +1,327 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 6 may. 2023, 21:44:54
+    Author     : CLAUDIO CRUZADO
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background: #192734;
+  padding: 15px;
+  z-index: 99;
+}
+.logo {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.sidebar hr{
+    size: 1px;
+    margin-top: 5px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar .imgRedonda{
+    width:90px;
+    height:90px;
+    border-radius:150px;
+    margin-left: 60px;
+}
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 1px;
+  overflow-y: scroll;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: #fff;
+  font-size: 16px;
+  padding: 15px 20px;
+  font-weight: bold;
+}
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.item i {
+  font-size: 12px;
+}
+
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: #223A4F;
+  display: none;
+  border-radius: 10px;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background: #971A25;
+  cursor: pointer;
+  
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 100;
+  background: #fff;
+}
+.main h1 {
+  color: #11101d;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* Estilos de NAV*/
+
+.navbar-right {
+  float: right;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #971A25;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #943840;
+}
+
+.botonsalir{
+    font-size: 14px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botonsalir:hover {
+  background-color: #5D5A5A;
+}
+
+/* Estilos para el menú desplegable */
+.Logueo {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 143px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.dropdown:hover .Logueo {
+  display: block;
+}
+
+.Logueo a {
+  color: #333;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.Logueo a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilos mensaje*/
+.swal-button {
+  background-color: #192734 !important;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #0e1520 !important;
+}
+
+.swal-custom-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 0px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #333;
+    padding: 15px;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar.close {
+    transform: translateX(0);
+  }
+  
+  .navbar,
+  .main {
+    left: 0;
+    width: 100%;
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    position: fixed;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 25px;
+    background: #F5B3E3;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 100;
+    background: #fff;
+  }
+  
+  .menu-items {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .submenu {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    background: #3F3F3F;
+    display: none;
+    border-radius: 0;
+  }
+  
+  .submenu .menu-title {
+    border-radius: 0;
+  }
+  
+  .show-submenu ~ .submenu {
+    display: block;
+  }
+}
+
+
+/* Estilos para tablets */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-left: 50px;
+    text-align: center;
+  }
+}

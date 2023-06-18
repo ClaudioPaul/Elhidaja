@@ -1,0 +1,453 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 25 may. 2023, 17:16:02
+    Author     : PC
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+body{
+    background-color: #fff;
+    margin-top: 80px;
+}
+
+h1{
+  font-size: 32px;
+  margin-top: 0px;
+  font-family: 'Berlin Sans FB Demi', sans-serif;
+  color: #192734;
+}
+
+/* Botones Exportar*/
+.Exportar{
+    display: flex;
+    margin-top: 50px;
+}
+
+.Exportar button{
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-right: 0px;
+  background-color: #192734;
+  color: white;
+  font-size: 18px;
+  font-family: 'Berlin Sans FB Demi', sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  transition: background-color 0.3s ease;
+}
+
+.Exportar .Exportar-1{
+    margin-left: 5%;
+}
+
+.Exportar .Exportar-2{
+    margin-left: 5%;
+}
+
+.Exportar .icono{
+    color: red;
+    margin-left: 15px;
+    padding-right: 5px;
+    color: #fff;
+}
+
+.Exportar button:hover{
+    background-color: #2E506D;
+}
+
+/*Boton para abrir la ventana Modal*/
+.BotonModal{
+  display: block;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-right: 0px;
+  background-color: #192734;
+  color: white;
+  font-size: 18px;
+  font-family: 'Berlin Sans FB Demi', sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 5%;
+  transition: background-color 0.3s ease;
+}
+
+.BotonModal:hover{
+    background-color: #2E506D;
+}
+
+.BotonModal .icono{
+    margin-left: 15px;
+    padding-right: 5px;
+    color: #fff;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Ventana modal*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Diseño del formulario buscar por Ruc*/
+.ConsultarRuc {
+  display: flex;
+  flex-direction: row;
+}
+
+.ConsultarRuc input[type="text"],
+.ConsultarRuc input[type="submit"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.ConsultarRuc input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+.ConsultarRuc input[type="submit"] {
+  background-color: #192734;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-family: 'Berlin Sans FB Demi', sans-serif;
+  font-size: 16px;
+}
+
+.ConsultarRuc input[type="submit"]:hover {
+  background-color: #2E506D;
+}
+
+/*Diseño formulario registrar*/
+.Grupos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+}
+
+.Grupos input{
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(28,28,28, 0.5);
+    outline: none;
+}
+
+.Grupos label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Botones input{
+    background-color: #192734;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font-size: 16px;
+}
+
+.Botones input:hover{
+    background-color: #2E506D;
+}
+
+/*Diseño tabla PC*/
+.Contenedor {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.Contenedor-Tabla {
+  width: 100%;
+}
+
+.Tabla-Contenedor {
+  overflow-y: auto;
+  max-height: 320px; /* Ajusta la altura máxima según tus necesidades */
+}
+
+.Contenedor-Tabla table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.Contenedor-Tabla th,
+.Contenedor-Tabla td {
+  padding: 4px;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Contenedor-Tabla th {
+  background-color: #192734;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  position: sticky;
+  top: 0;
+}
+
+
+.Contenedor-Tabla th {
+  background-color: #192734;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+}
+
+/*Tabla celular ocultar*/
+.Contenedor-2 table{
+    display: none;
+}
+
+
+/*Diseño para Celular*/
+@media (max-width: 800px) {
+    /*Boton para abrir la ventana Modal*/
+.BotonModal{
+  display: block;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-right: 0px;
+  background-color: #192734;
+  color: white;
+  font-size: 18px;
+  font-family: 'Berlin Sans FB Demi', sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.BotonModal:hover{
+    background-color: #2E506D;
+}
+
+.BotonModal .icono{
+    margin-left: 15px;
+    padding-right: 5px;
+    color: #fff;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Ventana modal*/
+
+.modal {
+  margin-top: 13%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 15px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ConsultarRuc{
+    margin-top: 45px;
+}
+
+.ConsultarRuc input[type="submit"]{
+    margin-left: 1px;
+}
+
+/* Botones Exportar*/
+.Exportar{
+    display: flex;
+    margin-top: 20px;
+}
+
+.Exportar button{
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-right: 0px;
+  background-color: #192734;
+  color: white;
+  font-size: 18px;
+  font-family: 'Berlin Sans FB Demi', sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  transition: background-color 0.3s ease;
+}
+
+.Exportar .Exportar-1{
+    margin-left: 1px;
+}
+
+.Exportar .Exportar-2{
+    margin-left: 10px;
+}
+
+/*Diseño de tabla para Celular*/
+.Contenedor table{
+    display: none;
+}
+
+.Contenedor-2 table{
+    display: block;
+}
+
+.Contenedor-2 {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.Contenedor-Tabla-2 {
+  width: 100%;
+}
+
+.Tabla-Contenedor-2 {
+  overflow-y: auto;
+  max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
+}
+
+.Contenedor-Tabla-2 table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.Contenedor-Tabla-2 th,
+.Contenedor-Tabla-2 td {
+  padding: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.Contenedor-Tabla-2 th {
+  background-color: #192734;
+  color: #fff;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+.Detalle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Detalle i {
+  display: block;
+}
+
+.Detalle .icono{
+   color: #192734;
+}
+
+}
