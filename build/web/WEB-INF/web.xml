@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>
+          Vista/Login/login.jsp
+        </welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>Validar</servlet-name>
+        <servlet-class>Controlador.Validar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorLogin</servlet-name>
+        <servlet-class>Controlador.ControladorLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Validar</servlet-name>
+        <url-pattern>/Validar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorLogin</servlet-name>
+        <url-pattern>/ControladorLogin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ControladorPrincipal</servlet-name>
+        <servlet-class>Controlador.ControladorPrincipal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControladorPrincipal</servlet-name>
+        <url-pattern>/ControladorPrincipal</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ControladorEmpresas</servlet-name>
+        <servlet-class>Controlador.ControladorEmpresas</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControladorEmpresas</servlet-name>
+        <url-pattern>/ControladorEmpresas</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ControladorEmpleado</servlet-name>
+        <servlet-class>Controlador.ControladorEmpleado</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControladorEmpleado</servlet-name>
+        <url-pattern>/ControladorEmpleado</url-pattern>
+    </servlet-mapping>
+</web-app>

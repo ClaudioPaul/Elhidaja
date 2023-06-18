@@ -1,0 +1,42 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27 may. 2023, 22:58:46
+    Author     : PC
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+/*Diseño del formulario buscar por Ruc*/
+.ConsultarRuc {
+  display: flex;
+  flex-direction: row;
+}
+
+.ConsultarRuc input[type="text"],
+.ConsultarRuc input[type="submit"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.ConsultarRuc input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+.ConsultarRuc input[type="submit"] {
+  background-color: #192734;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-family: 'Berlin Sans FB Demi', sans-serif;
+  font-size: 16px;
+}
+
+.ConsultarRuc input[type="submit"]:hover {
+  background-color: #2E506D;
+}

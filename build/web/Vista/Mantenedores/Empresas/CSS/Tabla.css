@@ -1,0 +1,173 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27 may. 2023, 23:03:18
+    Author     : PC
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+/*Diseño tabla PC*/
+.Contenedor {
+  width: 100%;
+  margin-top: 10px;
+  overflow-x: auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.Contenedor-Tabla {
+  width: 100%;
+}
+
+.Tabla-Contenedor {
+  overflow-y: auto;
+  border-radius: 4px;
+  max-height: 390px;
+}
+
+.Contenedor-Tabla table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Contenedor-Tabla th,
+.Contenedor-Tabla td {
+  padding: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.Contenedor-Tabla th {
+  background-color: #192734;
+  color: #fff;
+  font-weight: bold;
+  position: sticky;
+  padding: 15px 0;
+  top: 0;
+}
+
+.Contenedor-Tabla tr {
+    height: 32px;
+}
+
+.Contenedor-Tabla tr:hover {
+    background-color: rgba(225,225,225, 1);
+}
+
+.btn-acciones {
+    height: 32px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #192734;
+}
+
+.btn-editar {
+    margin-right: 4px;
+}
+
+.btn-editar:hover {
+    background-color: #192734;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #971A25;
+    color: white;
+}
+
+
+.Contenedor-Tabla th {
+  background-color: #192734;
+  color: #fff;
+  font-weight: bold;
+}
+
+/*Tabla celular ocultar*/
+.Contenedor-2 {
+    display: none;
+}
+
+
+/*Diseño para Celular*/
+@media (max-width: 480px) {
+    /*Diseño de tabla para Celular*/
+    .Contenedor table{
+        display: none;
+    }
+
+    .Contenedor-2 {
+        display: block;
+    }
+    
+    .Contenedor-2 {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    .table-scroll {
+        width: 100%;
+        height: 380px;
+        overflow-y: scroll;
+    }
+    
+    .target {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 8px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+        border: 1px solid #333;
+    }
+    
+    .lista-datos-empresas {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center; 
+        padding: 4px 8px
+    }
+    
+    .lista-datos-empresas span:nth-child(1) {
+        width: 35%;
+    }
+    
+    .lista-datos-empresas span:nth-child(2) {
+        width: 65%;
+    }
+    
+    .btns-opciones-listado {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 60%;
+        justify-content: space-between;
+    }
+    
+    .btns-opciones-listado a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #192734, #2E506D);
+        color: white;
+    }
+    
+    .btns-opciones-listado a:hover {
+        background-color: #2E506D;
+    }
+}

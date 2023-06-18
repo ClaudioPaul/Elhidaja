@@ -1,0 +1,111 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27 may. 2023, 22:53:25
+    Author     : PC
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+/*Boton para abrir la ventana Modal*/
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEAD REGISTRO EMPRESAS Y BOTON NUEVO */
+
+.grupo-header-empresa {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 10px;
+}
+
+.dato-titulo-empresa,
+.btn-nueva-empresa{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+  font-size: 28px;
+  color: #192734;
+}
+
+.BotonModal{
+  display: flex;
+  flex-direction: row;
+  padding: 8px 16px;
+  background-color: #192734;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.BotonModal:hover{
+    background-color: #2E506D;
+    transition: all 0.3s ease;
+}
+
+.BotonModal .icono{
+    margin-left: 15px;
+    padding-right: 5px;
+    color: #fff;
+}
+
+
+
+
+/*Diseño para Celular*/
+@media (max-width: 480px) {
+    
+    .grupo-header-empresa {
+        height: auto;
+        margin-top: 5px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 10px 5px;
+        text-align: center;
+        margin-top: 8px;
+        
+    }
+    
+    .btn-nueva-empresa {
+        display: flex;
+        justify-content: right;
+    }
+    
+    .BotonModal{
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-align: center;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .BotonModal span {
+        display: none;
+    }
+    
+    .BotonModal .icono{
+        margin-left: 0px;
+        padding-right: 0px;
+        font-size: 20px;
+    }
+
+}
